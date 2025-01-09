@@ -43,7 +43,7 @@ export function Table({ filteredList }: Props) {
 
         <div className="flex flex-col text-center space-y-6">
           <p className="font-bold text-lg sm:text-xl">Valor</p>
-          <div className="flex flex-col items-center space-y-6">
+          <div className="flex flex-col  space-y-6">
             {filteredList.map((item, index) => (
               <div key={index}>
                 <div className="relative flex items-center">

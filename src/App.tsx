@@ -30,6 +30,12 @@ export function App() {
 
   }, [filteredList])
 
+  function handleAddItem(item: Item) {
+    let newList = [...list]
+    newList.push(item)
+    setList(newList)
+  }
+
   return (
     <div>
       <header className="flex items-center justify-center h-52 bg-purple-600">
@@ -46,7 +52,7 @@ export function App() {
         />
 
         {/* Insert Form */}
-        <Form />
+        <Form handleAddItem={handleAddItem} />
 
         {/* Results */}
         <Table filteredList={filteredList} />

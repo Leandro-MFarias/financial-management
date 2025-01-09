@@ -23,7 +23,7 @@ export function filterListByMonth(list: Item[], date: string): Item[] {
 export function formatDate(date: Date): string {
   let year = date.getFullYear()
   let month = date.getMonth() + 1
-  let day = date.getDay()
+  let day = date.getDate()
 
   return `${addZeroToDate(day)}/${addZeroToDate(month)}/${year}`
 }
@@ -38,3 +38,8 @@ export function formatCurrentMonth(currentMonth: string): string {
   return `${months[parseInt(month) - 1]} de ${year}`
 
 } 
+
+export function newDateAdjusted(newDate: string) {
+  let [year, month,day] = newDate.split('-')
+  return new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
+}
