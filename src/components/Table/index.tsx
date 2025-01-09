@@ -3,11 +3,12 @@ import { Item } from "../../data/items";
 import { categories } from "../../data/categories";
 import { formatDate } from "../../helpers/dateFilter";
 
-interface Props {
+interface TableProps {
   filteredList: Item[];
+  handleRemoveItem: (item: Item) => void;
 }
 
-export function Table({ filteredList }: Props) {
+export function Table({ filteredList, handleRemoveItem }: TableProps) {
   return (
     <div className="bg-zinc-700 max-w-[90%] xl:max-w-7xl mx-auto flex flex-col rounded-xl py-7 sm:pl-10 -translate-y-14 space-y-6 shadow-[0px_0px_5px_-1px_#d9d9d9]">
       <div className="flex space-x-6 pl-2 sm:pl-0 ssl:justify-start ssl2:justify-around sm:justify-between  sm:pr-20">
@@ -25,9 +26,11 @@ export function Table({ filteredList }: Props) {
             <p className="font-bold  text-lg sm:text-xl">Categoria</p>
             {filteredList.map((item, index) => (
               <div key={index}>
-                <span 
-                  className={`${categories[item.category].color} font-semibold`} 
-                >{categories[item.category].description}</span>
+                <span
+                  className={`${categories[item.category].color} font-semibold`}
+                >
+                  {categories[item.category].description}
+                </span>
               </div>
             ))}
           </div>
@@ -47,8 +50,21 @@ export function Table({ filteredList }: Props) {
             {filteredList.map((item, index) => (
               <div key={index}>
                 <div className="relative flex items-center">
-                  <span className={`${categories[item.category].expense ? `text-redB` : `text-green-500`} font-semibold`}>R$ {item.value}</span>
-                  <Trash2 className="absolute ssl:-right-[18px] sm:-right-8 ssl:size-4 sm:size-5 text-zinc-300 hover:text-red-600 transition duration-200 ease-in cursor-pointer" />
+                  <span
+                    className={`${
+                      categories[item.category].expense
+                        ? `text-redB`
+                        : `text-green-500`
+                    } font-semibold`}
+                  >
+                    R$ {item.value}
+                  </span>
+                  <button 
+                    onClick={() => handleRemoveItem(item)}
+                    className="absolute ssl:-right-[18px] sm:-right-8 ssl:size-4 sm:size-5 text-zinc-300 hover:text-red-600 transition duration-200 ease-in cursor-pointer"
+                  >
+                    <Trash2 />
+                  </button>
                 </div>
               </div>
             ))}

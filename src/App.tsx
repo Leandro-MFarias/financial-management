@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { items, Item } from "./data/items";
-import { categories, Category } from "./data/categories";
+import { categories } from "./data/categories";
 import { filterListByMonth, getCurrentMonth } from "./helpers/dateFilter";
 import { Table } from "./components/Table";
 import { MonthInfo } from "./components/MonthInfo";
@@ -36,6 +36,11 @@ export function App() {
     setList(newList)
   }
 
+  function handleRemoveItem(itemToRemove: Item) {
+    const newList = list.filter(item => item !== itemToRemove)
+    setList(newList)
+  }
+
   return (
     <div>
       <header className="flex items-center justify-center h-52 bg-purple-600">
@@ -55,7 +60,7 @@ export function App() {
         <Form handleAddItem={handleAddItem} />
 
         {/* Results */}
-        <Table filteredList={filteredList} />
+        <Table filteredList={filteredList} handleRemoveItem={handleRemoveItem} />
       </div>
     </div>
   );
