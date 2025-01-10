@@ -9,25 +9,25 @@ export const items: Item[] = [
   {
     date: new Date(2025, 0, 1),
     category: "food",
-    description: "McDonalds",
+    description: "Ifood",
     value: 32.12,
   },
   {
     date: new Date(2025, 0, 6),
     category: "food",
-    description: "Burguer",
-    value: 28,
+    description: "Restaurante",
+    value: 120,
   },
   {
     date: new Date(2025, 0, 7),
     category: "rent",
-    description: "Aluguel Apt",
-    value: 2300,
+    description: "Aluguel",
+    value: 1250,
   },
   {
-    date: new Date(2025, 1, 4),
+    date: new Date(2025, 1, 14),
     category: "salary",
-    description: "Trampo",
-    value: 4500,
+    description: "Freela",
+    value: 2500,
   },
 ];

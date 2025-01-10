@@ -7,7 +7,7 @@ export type Category = {
 }
 
 export const categories: Category = {
-  food: { description: 'Alimentaçao', color: 'text-sky-400', expense: true },
+  food: { description: 'Alimentaçao', color: 'text-cyan-400', expense: true },
   rent: { description: 'Aluguel', color: 'text-redB', expense: true },
   salary: { description: 'Salario', color: 'text-green-500', expense: false },
 }
