@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+<h1 align="center">Financial Management 📊</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>📜 Project Description</h2>
 
-Currently, two official plugins are available:
+<p>
+  Welcome to my Financial Management System!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The main goal of this project is to assist in managing personal finances in a simple and practical way. I developed this application using React, TypeScript, and TailwindCSS, technologies that provide a dynamic and responsive interface, along with well-structured code.
+</p>
 
-## Expanding the ESLint configuration
+### 🚀 Tecnologias Utilizadas:
+<div>
+    <img src="https://shields.io/badge/react-black?logo=react&style=for-the-badge">
+    <img src="https://shields.io/badge/tailwindcss-black?logo=tailwindcss&style=for-the-badge">
+    <img src="https://img.shields.io/badge/TS-0c1014?style=for-the-badge&logo=typescript">
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<h2>📆 Key Features</h2>
 
-- Configure the top-level `parserOptions` property like this:
+<p>
+📊 Income and Expense Management:  
+The application allows you to add financial entries such as income and expenses, categorizing them to simplify tracking.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+📅 Monthly Filtering:  
+Data can be filtered by month, helping you analyze expenses and earnings for specific periods.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+⚙️ Responsiveness and Style:  
+Using TailwindCSS, I created a modern, responsive, and visually appealing design, ensuring a great experience on any device.
+</p>
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+<p>
+  This project showcases my skills as a developer, including programming logic, state management, and integrating modern styles with TailwindCSS. I will continue adding new features to expand the system's functionality and make it even more efficient. 🚀
+</p>
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 📸 Preview
+
+<img src="public/sistiema-financeiro">
