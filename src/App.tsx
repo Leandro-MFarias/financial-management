@@ -3,7 +3,7 @@ import { items, Item } from "./data/items";
 import { categories } from "./data/categories";
 import { filterListByMonth, getCurrentMonth } from "./helpers/dateFilter";
 import { Table } from "./components/Table";
-import { MonthInfo } from "./components/MonthInfo";
+import { ResumeMonth } from "./components/ResumeMonth";
 import { Form } from "./components/Form";
 
 export function App() {
@@ -49,7 +49,7 @@ export function App() {
 
       <div className="space-y-14">
         {/* Information Month */}
-        <MonthInfo 
+        <ResumeMonth 
           setCurrentMonth={setCurrentMonth} 
           currentMonth={currentMonth}
           income={income}

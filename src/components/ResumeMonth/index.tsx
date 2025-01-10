@@ -2,25 +2,27 @@ import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 import { formatCurrentMonth } from "../../helpers/dateFilter";
 import { PaymentAndExpenses } from "../PaymentAndExpenses";
 
-interface MonthInfoProps {
+interface ResumeMonthProps {
   currentMonth: string
   setCurrentMonth: (newMonth: string) => void
   income: number
   expense: number
 }
 
-export function MonthInfo({ currentMonth, setCurrentMonth, income, expense }: MonthInfoProps) {
+export function ResumeMonth({ currentMonth, setCurrentMonth, income, expense }: ResumeMonthProps) {
 
   function handlePrevMonth() {
     let [year, month] = currentMonth.split('-')
     let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1)
     currentDate.setMonth( currentDate.getMonth() - 1 )
+
     handleMonthChange(`${currentDate.getFullYear()}-${currentDate.getMonth() + 1}`)
   }
   function handleNextMonth() {
     let [year, month] = currentMonth.split('-');
     let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
     currentDate.setMonth( currentDate.getMonth() + 1 );
+    
     handleMonthChange(`${currentDate.getFullYear()}-${currentDate.getMonth() + 1}`);
   }
 
