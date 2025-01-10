@@ -34,4 +34,4 @@ Using TailwindCSS, I created a modern, responsive, and visually appealing design
 
 ### 📸 Preview
 
-<img src="public/sistiema-financeiro">
+<img src="public/sistema-financeiro.gif">
