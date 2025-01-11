@@ -32,14 +32,24 @@ export function Form({ handleAddItem }: FormProps) {
       errors.push("Value invalida!")
     }
 
-    errors.length > 0
-      ? alert(errors.join("\n"))
-      : handleAddItem({
-          date: newDateAdjusted(newDate),
-          category: newCategory,
-          description: newDescription,
-          value: newValue,
-        });
+    if(errors.length > 0) {
+      alert(errors.join("\n"))
+    } else {
+      handleAddItem({
+        date: newDateAdjusted(newDate),
+        category: newCategory,
+        description: newDescription,
+        value: newValue,
+      });
+      clearFields()
+    }     
+  }
+
+  function clearFields() {
+    setNewDate('')
+    setNewCategory('')
+    setNewDescription('')
+    setNewValue(0)
   }
 
   return (
