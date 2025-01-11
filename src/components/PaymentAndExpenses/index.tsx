@@ -1,3 +1,5 @@
+import { locateString } from "../../helpers/locateString"
+
 interface Props {
   title: string
   value: number
@@ -9,7 +11,7 @@ export function PaymentAndExpenses({title, value, color}: Props) {
     <div className="">
       <div>
         <p className="text-zinc-300 sm:text-lg">{title}</p>
-        <span className={`font-bold text-sm sm:text-base ${color}`}>R$ {value}</span>
+        <span className={`font-bold text-sm sm:text-base ${color}`}>{locateString(value)}</span>
       </div>
     </div>
   );

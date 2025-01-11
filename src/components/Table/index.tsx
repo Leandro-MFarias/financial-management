@@ -2,6 +2,7 @@ import { Trash2 } from "lucide-react";
 import { Item } from "../../data/items";
 import { categories } from "../../data/categories";
 import { formatDate } from "../../helpers/dateFilter";
+import { locateString } from "../../helpers/locateString";
 
 interface TableProps {
   filteredList: Item[];
@@ -57,7 +58,7 @@ export function Table({ filteredList, handleRemoveItem }: TableProps) {
                         : `text-green-500`
                     } font-semibold`}
                   >
-                    R$ {item.value}
+                    R$ {locateString(item.value)}
                   </span>
                   <button 
                     onClick={() => handleRemoveItem(item)}
